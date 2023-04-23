@@ -1,0 +1,29 @@
+<div class="p-2">
+
+
+    <h1>{{title}}</h1>
+
+    <div class="input-group">
+        <input [(ngModel)]="removeChars" placeholder="Chars to remove like ',+" class="input-group-text">
+        <button (click)="appendPlus()" class="btn btn-success">+</button>
+        <button (click)="appendQuotation()" class="btn btn-success">"</button>
+        <button (click)="appendSingleQuotation()" class="btn btn-success">'</button>
+        <button (click)="appendSingleComma()" class="btn btn-success">,</button>
+        <button (click)="appendQuotation()" class="btn btn-success">-</button>
+    </div>
+
+    <textarea style="width:800px;height: 500px;" [(ngModel)]="rawText">
+
+    </textarea>
+
+    <div class="btn-group-vertical m-2">
+        <button (click)="removeIntruderChars()" class="btn btn-success">Trim Text</button>
+        <button (click)="formatJson()" class="btn btn-success">Format Sql</button>
+    </div>
+
+
+    <textarea style="width:800px;height: 500px;" [(ngModel)]="formattedText">
+
+    </textarea>
+
+</div>

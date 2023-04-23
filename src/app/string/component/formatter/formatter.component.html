@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+
+<div class="row">
+
+    <div class="col-5 m-2">
+        <h3>raw text</h3>
+        <textarea class="textarea-size" [(ngModel)]="rawText"></textarea>
+    </div>
+
+    <div class="col-1 align-self-center">
+        <button (click)="formatJson()" class="btn btn-success btn-md m-1">Format Json</button>
+        <button (click)="formatJsonDetails()" class="btn btn-success btn-md m-1">Format Json Details </button>
+        <button (click)="toggleOpen()" class="btn btn-secondary btn-md m-1">Toggle Open</button>
+        <button (click)="expandAll()" class="btn btn-secondary btn-md m-1 ">Expand All</button>
+        <button (click)="collapseAll()" class="btn btn-secondary btn-md m-1 ">Collapse All</button>
+
+    </div>
+
+    <div class="col-5 m-2" id="jsonFormatterParent">
+        <h3>formatted text</h3>
+    </div>
+ 
+</div>

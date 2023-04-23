@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+$textarea-size-width: 100%;
+$textarea-size-height: 750px;
+
+.block {
+    display: block;
+}
+
+.textarea-size {
+    width: $textarea-size-width;
+    height: $textarea-size-height;
+}
+
+
+pre span {
+    white-space: normal;
+}
+
+.string {
+    color: green;
+}
+
+.number {
+    color: darkorange;
+}
+
+.boolean {
+    color: blue;
+}
+
+.null {
+    color: magenta;
+}
+
+.key {
+    color: red;
+}
+
+.textarea-scroller {
+    width: $textarea-size-width;
+    height: $textarea-size-height;
+    overflow-y: uto;
+    overflow-x: hidden;
+    text-align: justify;
+}
