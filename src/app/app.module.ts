@@ -9,6 +9,7 @@ import { StringModule } from './string/string.module';
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     BrowserModule,

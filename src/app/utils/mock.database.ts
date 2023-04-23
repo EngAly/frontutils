@@ -3,7 +3,7 @@ VALUES
 ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger','4006','Norway');
 `
 
-export const SQL_INTRUDER_TEXT=`"SELECT\n" +
+export const SQL_INTRUDER_TEXT = `"SELECT\n" +
                 "     trs.payment_method,\n" +
                 "     SUM( (\n" +
                 "         SELECT\n" +
@@ -54,41 +54,70 @@ export const SQL_INTRUDER_TEXT=`"SELECT\n" +
                 "     trs.payment_method ";
 `
 
-export const JSON_DEMO_TEXT={
-    "id": "0001",
-    "type": "donut",
-    "name": "Cake",
-    "ppu": 0.55, "batters":    {        "batter":         [            { "id": "1001", "type": "Regular" ,"batxter":				[
-              { "id": "1001", "type": "Regular","batxter":				[
-                { "id": "1001", "type": "Regular" ,"batxter":				[
-                  { "id": "1001", "type": "Regular" },
-                  { "id": "1002", "type": "Chocolate" },
-                  { "id": "1003", "type": "Blueberry" },
-                  { "id": "1004", "type": "Devil's Food" }]},
+export const JSON_DEMO_TEXT = {
+  "id": "0001",
+  "type": "donut",
+  "name": "Cake",
+  "ppu": 0.55, "batters": {
+    "batter": [{
+      "id": "1001", "type": "Regular", "batxter": [
+        {
+          "id": "1001", "type": "Regular", "batxter": [
+            {
+              "id": "1001", "type": "Regular", "batxter": [
+                { "id": "1001", "type": "Regular" },
                 { "id": "1002", "type": "Chocolate" },
                 { "id": "1003", "type": "Blueberry" },
-                { "id": "1004", "type": "Devil's Food" }] },
-              { "id": "1002", "type": "Chocolate" },
-              { "id": "1003", "type": "Blueberry" },
-              { "id": "1004", "type": "Devil's Food" }]},
+                { "id": "1004", "type": "Devil's Food" }]
+            },
             { "id": "1002", "type": "Chocolate" },
             { "id": "1003", "type": "Blueberry" },
-            { "id": "1004", "type": "Devil's Food" }
-          ]
-      },
-    "topping":
-      [
-        { "id": "5001", "type": "None" },
-        { "id": "5002", "type": "Glazed" },
-        { "id": "5005", "type": "Sugar" },
-        { "id": "5007", "type": "Powdered Sugar" },
-        { "id": "5006", "type": "Chocolate with Sprinkles" },
-        { "id": "5003", "type": "Chocolate" },
-        { "id": "5004", "type": "Maple" }
-      ]
-  }
+            { "id": "1004", "type": "Devil's Food" }]
+        },
+        { "id": "1002", "type": "Chocolate" },
+        { "id": "1003", "type": "Blueberry" },
+        { "id": "1004", "type": "Devil's Food" }]
+    },
+    { "id": "1002", "type": "Chocolate" },
+    { "id": "1003", "type": "Blueberry" },
+    { "id": "1004", "type": "Devil's Food" }
+    ]
+  },
+  "topping":
+    [
+      { "id": "5001", "type": "None" },
+      { "id": "5002", "type": "Glazed" },
+      { "id": "5005", "type": "Sugar" },
+      { "id": "5007", "type": "Powdered Sugar" },
+      { "id": "5006", "type": "Chocolate with Sprinkles" },
+      { "id": "5003", "type": "Chocolate" },
+      { "id": "5004", "type": "Maple" }
+    ]
+}
 
   ;
 
 
-  export const JSON_DEMO_TEXT_STRING=`{\"title\": \"Hello one!\", \"author\": \"somexxxxxxxone\"}`
+export const JSON_DEMO_TEXT_STRING = `{\"title\": \"Hello one!\", \"author\": \"somexxxxxxxone\"}`
+
+export const ENUM_DEMO_CLASS = `public static enum PaymentMethodType {
+    CASH(new BigDecimal(1)),
+    CREDIT_CARD(new BigDecimal(2)),
+    VTP_CREDIT_ACCOUNT(new BigDecimal(3)),
+    POST_PAID(new BigDecimal(5)),
+    E_WALLET(new BigDecimal(9)),
+    POS(new BigDecimal(6));
+
+    public static final String DOMAIN_CODE = "TRS_PAYMENT_METHOD";
+
+    private BigDecimal value;
+
+    private PaymentMethodType(BigDecimal value) {
+        this.value = value;
+    }
+
+    public BigDecimal getValue() {
+        return value;
+    }
+}
+`

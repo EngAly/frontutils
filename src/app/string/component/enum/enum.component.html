@@ -1,0 +1,11 @@
+<div class="container-fluid">
+
+    <h2 class="text-center">{{sharedTextArea.pageHeader}}</h2>
+
+
+    <input [(ngModel)]="entityField" class="input-group-text">
+
+    <app-generic-textarea [sharedTextArea]="sharedTextArea" (childActionEmitter)="doEnumMethodsGeneration()">
+    </app-generic-textarea>
+
+</div>

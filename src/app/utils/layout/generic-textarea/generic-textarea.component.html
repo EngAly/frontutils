@@ -1,0 +1,17 @@
+<div class="row">
+
+    <div class="col-5">
+        <h5>{{sharedTextArea.workspaceTitle}}</h5>
+        <textarea class="textarea-size p-2" [(ngModel)]="sharedTextArea.rawText"></textarea>
+    </div>
+
+    <div class="col-1 align-self-center">
+        <button (click)="doAction()" class="btn btn-success btn-md m-1">{{sharedTextArea.primaryBtn}}</button>
+
+    </div>
+
+    <div class="col-5">
+        <h5>{{sharedTextArea.resultTitle}}</h5>
+        <textarea class="textarea-size p-2" [(ngModel)]="sharedTextArea.result"></textarea>
+    </div>
+</div>
