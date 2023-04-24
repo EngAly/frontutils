@@ -3,16 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FormatterComponent } from './component/formatter/formatter.component';
 import { FormsModule } from '@angular/forms';
 import { TrimmerComponent } from './component/trimmer/trimmer.component';
+import { DatabaseComponent } from './component/database/database.component';
+import {DatabaseRoutingModule} from "./database-routing.module";
 
 
 @NgModule({
   declarations: [
     FormatterComponent,
-    TrimmerComponent
+    TrimmerComponent,
+    DatabaseComponent
   ],
   imports: [
-    // CommonModule,
+    CommonModule,
     FormsModule,
+    DatabaseRoutingModule
   ],
   exports: [
     FormatterComponent,

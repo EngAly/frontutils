@@ -11,7 +11,7 @@ export class TrimmerComponent {
 
   title = "Sql Trimmer";
 
-  removeChars = "";
+  removeChars = '"+';
   rawText: string = SQL_INTRUDER_TEXT;
   private tempRawText: string = "";
   formattedText: string = "";

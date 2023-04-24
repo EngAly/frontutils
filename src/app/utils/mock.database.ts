@@ -1,5 +1,5 @@
-export const SQL_DEMO_TEXT = `"INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) 
-VALUES 
+export const SQL_DEMO_TEXT = `"INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES
 ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger','4006','Norway');
 `
 
@@ -85,20 +85,91 @@ export const JSON_DEMO_TEXT = {
   },
   "topping":
     [
-      { "id": "5001", "type": "None" },
-      { "id": "5002", "type": "Glazed" },
-      { "id": "5005", "type": "Sugar" },
-      { "id": "5007", "type": "Powdered Sugar" },
-      { "id": "5006", "type": "Chocolate with Sprinkles" },
-      { "id": "5003", "type": "Chocolate" },
-      { "id": "5004", "type": "Maple" }
+      {"id": "5001", "type": "None"},
+      {"id": "5002", "type": "Glazed"},
+      {"id": "5005", "type": "Sugar"},
+      {"id": "5007", "type": "Powdered Sugar"},
+      {"id": "5006", "type": "Chocolate with Sprinkles"},
+      {"id": "5003", "type": "Chocolate"},
+      {"id": "5004", "type": "Maple"}
     ]
-}
+  }
 
-  ;
+;
 
 
-export const JSON_DEMO_TEXT_STRING = `{\"title\": \"Hello one!\", \"author\": \"somexxxxxxxone\"}`
+export const JSON_DEMO_TEXT_STRING = `
+  [
+    {
+      "id": "0001",
+      "type": "donut",
+      "name": "Cake",
+      "ppu": 0.55,
+      "batters":
+        {
+          "batter":
+            [
+              {"id": "1001", "type": "Regular"},
+              {"id": "1002", "type": "Chocolate"},
+              {"id": "1003", "type": "Blueberry"},
+              {"id": "1004", "type": "Devil's Food"}
+            ]
+        },
+      "topping":
+        [
+          {"id": "5001", "type": "None"},
+          {"id": "5002", "type": "Glazed"},
+          {"id": "5005", "type": "Sugar"},
+          {"id": "5007", "type": "Powdered Sugar"},
+          {"id": "5006", "type": "Chocolate with Sprinkles"},
+          {"id": "5003", "type": "Chocolate"},
+          {"id": "5004", "type": "Maple"}
+        ]
+    },
+    {
+      "id": "0002",
+      "type": "donut",
+      "name": "Raised",
+      "ppu": 0.55,
+      "batters":
+        {
+          "batter":
+            [
+              {"id": "1001", "type": "Regular"}
+            ]
+        },
+      "topping":
+        [
+          {"id": "5001", "type": "None"},
+          {"id": "5002", "type": "Glazed"},
+          {"id": "5005", "type": "Sugar"},
+          {"id": "5003", "type": "Chocolate"},
+          {"id": "5004", "type": "Maple"}
+        ]
+    },
+    {
+      "id": "0003",
+      "type": "donut",
+      "name": "Old Fashioned",
+      "ppu": 0.55,
+      "batters":
+        {
+          "batter":
+            [
+              {"id": "1001", "type": "Regular"},
+              {"id": "1002", "type": "Chocolate"}
+            ]
+        },
+      "topping":
+        [
+          {"id": "5001", "type": "None"},
+          {"id": "5002", "type": "Glazed"},
+          {"id": "5003", "type": "Chocolate"},
+          {"id": "5004", "type": "Maple"}
+        ]
+    }
+  ]
+  `
 
 export const ENUM_DEMO_CLASS = `public static enum PaymentMethodType {
     CASH(new BigDecimal(1)),

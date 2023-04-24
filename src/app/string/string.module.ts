@@ -6,6 +6,8 @@ import { PrettyJsonModule } from 'angular2-prettyjson';
 import { PrettyJsonCustomPipe } from './pipe/prettyjson.pipe';
 import { EnumComponent } from './component/enum/enum.component';
 import { LayoutModule } from '../utils/layout/layout.module';
+import { StringRoutingModule } from './string-routing.module';
+import { StringComponent } from './component/string/string.component';
  
 
 
@@ -13,6 +15,7 @@ import { LayoutModule } from '../utils/layout/layout.module';
   declarations: [
     FormatterComponent,
     EnumComponent,
+    StringComponent,
 
   ],
   exports: [
@@ -24,7 +27,8 @@ import { LayoutModule } from '../utils/layout/layout.module';
     CommonModule,
     FormsModule,
     PrettyJsonModule,
-    LayoutModule
+    LayoutModule,
+    StringRoutingModule
   ],
   providers:[
     PrettyJsonCustomPipe
