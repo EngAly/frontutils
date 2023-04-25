@@ -15,7 +15,7 @@ import { StringComponent } from './component/string/string.component';
   declarations: [
     FormatterComponent,
     EnumComponent, 
-    StringComponent,
+     StringComponent,
 
   ],
   exports: [
