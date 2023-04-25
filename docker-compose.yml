@@ -1,0 +1,16 @@
+version: '3.5'
+
+networks:
+ utils:
+  name: utils
+
+services: 
+ utils:
+   container_name: utils
+   build: .
+   image: utils:v1
+   restart: always
+   ports: 
+     - "8118:80"
+   networks:
+      - utils
