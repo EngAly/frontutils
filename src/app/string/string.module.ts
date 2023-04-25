@@ -14,7 +14,7 @@ import { StringComponent } from './component/string/string.component';
 @NgModule({
   declarations: [
     FormatterComponent,
-    EnumComponent,
+    EnumComponent, 
     StringComponent,
 
   ],
