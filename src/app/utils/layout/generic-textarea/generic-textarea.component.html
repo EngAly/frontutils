@@ -6,7 +6,10 @@
     </div>
 
     <div class="col-1 align-self-center">
-        <button (click)="doAction()" class="btn btn-success btn-md m-1">{{sharedTextArea.primaryBtn}}</button>
+      <button (click)="doAction()" class="btn btn-success btn-md m-1">{{sharedTextArea.primaryBtnTitle}}</button>
+      <button class="btn btn-success btn-md m-1"
+              [ngClass]="{'d-none': sharedTextArea.secondaryBtnVisibility != true}">{{sharedTextArea.secondaryBtnTitle}}
+      </button>
 
     </div>
 

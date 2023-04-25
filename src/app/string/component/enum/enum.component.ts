@@ -13,7 +13,7 @@ export class EnumComponent {
     pageHeader: "Generate Enum Operations",
     workspaceTitle: "Generate Enum Methods",
     resultTitle: "Result",
-    primaryBtn: "Do Generation",
+    primaryBtnTitle: "Do Generation",
     rawText: ENUM_DEMO_CLASS,
     result: ""
   }

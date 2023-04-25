@@ -4,6 +4,7 @@ import { FormatterComponent } from './component/formatter/formatter.component';
 import { FormsModule } from '@angular/forms';
 import { TrimmerComponent } from './component/trimmer/trimmer.component';
 import { DatabaseComponent } from './component/database/database.component';
+import { LayoutModule } from '../utils/layout/layout.module';
 import {DatabaseRoutingModule} from "./database-routing.module";
 
 
@@ -16,7 +17,8 @@ import {DatabaseRoutingModule} from "./database-routing.module";
   imports: [
     CommonModule,
     FormsModule,
-    DatabaseRoutingModule
+    DatabaseRoutingModule,
+    LayoutModule,
   ],
   exports: [
     FormatterComponent,

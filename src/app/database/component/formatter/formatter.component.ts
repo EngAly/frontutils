@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { format } from 'sql-formatter';
-import { SQL_DEMO_TEXT } from 'src/app/utils/mock.database';
+import {Component} from '@angular/core';
+import {format} from 'sql-formatter';
+import {SharedTextArea} from 'src/app/model/sared-textarea';
+import {SQL_DEMO_TEXT} from 'src/app/utils/mock.database';
 
 
 @Component({
@@ -10,14 +11,17 @@ import { SQL_DEMO_TEXT } from 'src/app/utils/mock.database';
 })
 export class FormatterComponent {
 
-  title = "Sql Formatter";
-
-  rawText: string = SQL_DEMO_TEXT;
-  formattedText: string = "";
-
-  public formatJson() {
-    this.formattedText = format(this.rawText);
+  sharedTextArea: SharedTextArea = {
+    pageHeader: "Sql Formatter",
+    workspaceTitle: "",
+    resultTitle: "Result",
+    primaryBtnTitle: "Format Sql",
+    rawText: SQL_DEMO_TEXT,
+    result: "",
   }
 
+  public formatJson() {
+    this.sharedTextArea.result = format(this.sharedTextArea.rawText);
+  }
 
 }

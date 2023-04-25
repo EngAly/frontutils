@@ -1,6 +1,5 @@
 <div class="container-fluid">
 
-  <h2 class="text-center">{{title}}</h2>
   <div class="row">
 
     <div class="input-group">
@@ -14,15 +13,14 @@
     <div class="col-5">
 
 
-      <h5>raw data</h5>
       <textarea class="textarea-size" [(ngModel)]="rawText"></textarea>
     </div>
 
 
     <div class="col-1 align-self-center">
       <div class="btn-group-vertical m-2">
-        <button (click)="removeIntruderChars()" class="btn btn-success">Trim Text</button>
-        <button (click)="formatJson()" class="btn btn-success">Format Sql</button>
+        <button (click)="removeIntruderChars()" class="btn btn-success mb-1">Trim Text</button>
+        <button (click)="formatJson()" class="btn btn-success mb-1">Format Sql</button>
       </div>
     </div>
 
