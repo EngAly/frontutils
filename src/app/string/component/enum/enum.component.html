@@ -2,7 +2,10 @@
 
   <h2 class="text-center">{{sharedTextArea.pageHeader}}</h2>
 
-  <input [(ngModel)]="entityField" class="input-group-text">
+  <div class="input-group">
+    <label class="text-success m-1">Type Field Entity Name:</label>
+    <input [(ngModel)]="entityField" class="input-group-text">
+  </div>
 
   <app-generic-textarea [sharedTextArea]="sharedTextArea" (childActionEmitter)="doEnumMethodsGeneration()">
   </app-generic-textarea>

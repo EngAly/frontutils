@@ -1,20 +1,22 @@
 <div class="row">
 
     <div class="col-5">
-        <h5>{{sharedTextArea.workspaceTitle}}</h5>
+        <h6>{{sharedTextArea.workspaceTitle}}</h6>
         <textarea class="textarea-size p-2" [(ngModel)]="sharedTextArea.rawText"></textarea>
     </div>
 
     <div class="col-1 align-self-center">
-      <button (click)="doAction()" class="btn btn-success btn-md m-1">{{sharedTextArea.primaryBtnTitle}}</button>
-      <button class="btn btn-success btn-md m-1"
+
+      <button class="btn btn-success btn-md m-1" (click)="doAction()">{{sharedTextArea.primaryBtnTitle}}</button>
+
+      <button class="btn btn-success btn-md m-1" (click)="doSecondaryAction()"
               [ngClass]="{'d-none': sharedTextArea.secondaryBtnVisibility != true}">{{sharedTextArea.secondaryBtnTitle}}
       </button>
 
     </div>
 
     <div class="col-5">
-        <h5>{{sharedTextArea.resultTitle}}</h5>
+        <h6>{{sharedTextArea.resultTitle}}</h6>
         <textarea class="textarea-size p-2" [(ngModel)]="sharedTextArea.result"></textarea>
     </div>
 </div>

@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SharedTextArea } from 'src/app/model/sared-textarea';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {SharedTextArea} from 'src/app/model/sared-textarea';
 
 @Component({
   selector: 'app-generic-textarea',
@@ -12,9 +12,14 @@ export class GenericTextareaComponent {
   // @Input() doAction: any;
 
   @Output() childActionEmitter = new EventEmitter();
+  @Output() secondaryChildActionEmitter = new EventEmitter();
 
   public doAction() {
     this.childActionEmitter.emit();
+  }
+
+  public doSecondaryAction() {
+    this.secondaryChildActionEmitter.emit();
   }
 
 }

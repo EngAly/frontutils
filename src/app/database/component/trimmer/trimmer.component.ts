@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { format } from 'sql-formatter';
-import { SQL_DEMO_TEXT, SQL_INTRUDER_TEXT } from 'src/app/utils/mock.database';
+import {Component} from '@angular/core';
+import {format} from 'sql-formatter';
+import {SQL_INTRUDER_TEXT} from 'src/app/utils/mock.database';
+import {SharedTextArea} from "../../../model/sared-textarea";
 
 @Component({
   selector: 'app-trimmer',
@@ -9,28 +10,37 @@ import { SQL_DEMO_TEXT, SQL_INTRUDER_TEXT } from 'src/app/utils/mock.database';
 })
 export class TrimmerComponent {
 
-  title = "Sql Trimmer";
 
   removeChars = '"+';
-  rawText: string = SQL_INTRUDER_TEXT;
+
+  sharedTextArea: SharedTextArea = {
+    pageHeader: "Sql Trimmer",
+    workspaceTitle: "Sql Text",
+    resultTitle: "Result",
+    primaryBtnTitle: "Trim Text",
+    secondaryBtnTitle: "Format Sql",
+    secondaryBtnVisibility: true,
+    rawText: SQL_INTRUDER_TEXT,
+    result: "",
+  }
+
   private tempRawText: string = "";
-  formattedText: string = "";
 
   public removeIntruderChars() {
 
-    this.tempRawText = this.rawText;
+    this.tempRawText = this.sharedTextArea.rawText;
 
     this.removeChars.split('').forEach(char => {
       this.tempRawText = this.tempRawText.replaceAll(char, "");
     });
 
-    this.formattedText = this.tempRawText;
+    this.sharedTextArea.result = this.tempRawText;
 
   }
 
-  public formatJson() {
+  public formatSql() {
     this.removeIntruderChars();
-    this.formattedText = format(this.formattedText);
+    this.sharedTextArea.result = format(this.sharedTextArea.result);
   }
 
   public appendPlus() {

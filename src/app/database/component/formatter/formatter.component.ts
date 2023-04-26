@@ -13,7 +13,7 @@ export class FormatterComponent {
 
   sharedTextArea: SharedTextArea = {
     pageHeader: "Sql Formatter",
-    workspaceTitle: "",
+    workspaceTitle: "Sql Text",
     resultTitle: "Result",
     primaryBtnTitle: "Format Sql",
     rawText: SQL_DEMO_TEXT,

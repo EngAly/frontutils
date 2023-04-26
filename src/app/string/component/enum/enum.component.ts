@@ -10,8 +10,8 @@ import { ENUM_DEMO_CLASS } from 'src/app/utils/mock.database';
 export class EnumComponent {
 
   sharedTextArea: SharedTextArea = {
-    pageHeader: "Generate Enum Operations",
-    workspaceTitle: "Generate Enum Methods",
+    pageHeader: "Generate Enum Items Methods",
+    workspaceTitle: "Enum Class",
     resultTitle: "Result",
     primaryBtnTitle: "Do Generation",
     rawText: ENUM_DEMO_CLASS,
