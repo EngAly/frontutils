@@ -1,0 +1,65 @@
+<h1 class="text-center">Text Compare</h1>
+<!--<div *ngIf="isCompared" class="row">-->
+<!--  <div class="col-md-12">-->
+<!--    <form class="form-inline" role="form">-->
+<!--      <label for="lang" class="mb-2 mr-sm-2">Language:</label>-->
+<!--      <select id="lang" name="lang" class="form-control mb-2 mr-sm-2" [(ngModel)]="selectedLang"-->
+<!--              (change)="onChangeLanguage($event.target)">-->
+<!--        <option *ngFor="let option of languages" [value]="option">{{option}}</option>-->
+<!--      </select>-->
+<!--      <label for="theme" class="mb-2 mr-sm-2">Theme:</label>-->
+<!--      <select id="theme" name="theme" class="form-control mb-2 mr-sm-2" [(ngModel)]="selectedTheme"-->
+<!--              (change)="onChangeTheme($event.target)">-->
+<!--        <option *ngFor="let option of themes" [value]="option.value">{{option.name}}</option>-->
+<!--      </select>-->
+<!--      &lt;!&ndash;        <div class="form-check mb-2 mr-sm-2">&ndash;&gt;-->
+<!--      &lt;!&ndash;          <label class="form-check-label">&ndash;&gt;-->
+<!--      &lt;!&ndash;            <input class="form-check-input "type="checkbox" (change)="onChangeInline($event.target)"> Inline Diff&ndash;&gt;-->
+<!--      &lt;!&ndash;          </label>&ndash;&gt;-->
+<!--      &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+<div *ngIf="isCompared" class="row">
+  <div class="col-md-12">
+    <label class="text-success"></label>
+    <ngx-monaco-diff-editor id="diff-editor" [options]="diffOptions" [originalModel]="originalModel"
+                            [modifiedModel]="modifiedModel"></ngx-monaco-diff-editor>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="returnToOriginalText()">Return To Original Text</button>
+
+</div>
+
+<div>
+  <div class="row" *ngIf="!isCompared">
+    <div class="col-md-6">
+      <label class="text-success">Original Text</label>
+      <ngx-monaco-editor id="editor1" [options]="inputOptions" [(ngModel)]="originalText"></ngx-monaco-editor>
+    </div>
+    <div class="col-md-6">
+      <label class="text-success">Changed Text</label>
+      <ngx-monaco-editor id="editor2" [options]="inputOptions" [(ngModel)]="modifiedText"></ngx-monaco-editor>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="btn-group">
+
+        <button type="button" class="btn btn-danger col-md-1" (click)="clearAll()">Clear All</button>
+        <button type="button" class="btn btn-warning col-md-2" (click)="clearOriginalText()">Clear</button>
+
+        <button type="button" class="btn btn-secondary col-md-2" (click)="removeLeftTextEmptyLines()">Remove Empty
+          Lines
+        </button>
+        <button type="button" class="btn btn-success col-md-4" (click)="onCompare()">Find Difference</button>
+
+        <button type="button" class="btn btn-secondary col-md-2" (click)="removeRightTextEmptyLines()">Remove Empty
+          Lines
+        </button>
+
+        <button type="button" class="btn btn-warning col-md-2" (click)="clearModifiedText()">Clear</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>

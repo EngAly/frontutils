@@ -1,7 +1,7 @@
 import { Component, ElementRef, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import JSONFormatter from 'json-formatter-js';
 import { JSON_DEMO_TEXT, JSON_DEMO_TEXT_STRING } from 'src/app/utils/mock.database';
-import { PrettyJsonCustomPipe } from '../../pipe/prettyjson.pipe';
+import { PrettyJsonCustomPipe } from '../../../utils/pipe/prettyjson.pipe';
 
 @Component({
   selector: 'string-formatter',

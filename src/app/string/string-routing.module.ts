@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {EnumComponent} from './component/enum/enum.component';
 import {FormatterComponent} from './component/formatter/formatter.component';
 import {StringComponent} from "./component/string/string.component";
+import {TextCompareComponent} from "./component/text-compare/text-compare.component";
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
     path: '', component: StringComponent,
     children: [
       {path: 'enum', component: EnumComponent,},
-      {path: 'formatter', component: FormatterComponent,}
+      {path: 'formatter', component: FormatterComponent,},
+      {path: 'textcompare', component: TextCompareComponent,},
     ]
   }
 

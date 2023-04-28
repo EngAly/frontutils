@@ -12,35 +12,34 @@ $textarea-size-height: 620px;
     height: $textarea-size-height;
 }
 
-
-pre span {
-    white-space: normal;
-}
-
-.string {
-    color: green;
-}
-
-.number {
-    color: darkorange;
-}
-
-.boolean {
-    color: blue;
-}
-
-.null {
-    color: magenta;
-}
-
-.key {
-    color: red;
-}
-
 .textarea-scroller {
     width: $textarea-size-width;
     height: $textarea-size-height;
     overflow-y: uto;
     overflow-x: hidden;
     text-align: justify;
+}
+
+pre span {
+  white-space: normal;
+}
+
+.string {
+  color: green;
+}
+
+.number {
+  color: darkorange;
+}
+
+.boolean {
+  color: blue;
+}
+
+.null {
+  color: magenta;
+}
+
+.key {
+  color: red;
 }
