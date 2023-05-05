@@ -1,0 +1,25 @@
+<div class="row">
+
+  <div class="col-5">
+    <textarea class="textarea-size p-2" (ngModelChange)="getStatistics()" [(ngModel)]="text "></textarea>
+  </div>
+
+  <div class="col-1 align-self-center">
+    <button class="btn btn-success btn-md m-1" (click)="getStatistics()">Statistics</button>
+
+    <div class="btn-group">
+      <button class="btn btn-success" (click)="undo()"><<<</button>
+      <button class="btn btn-success" (click)="do()">>>></button>
+    </div>
+
+    <button class="btn btn-success btn-md m-1" (click)="clear()">Clear</button>
+  </div>
+
+
+  <div class="col-5">
+    <div class="p-2 textarea-scroller" contenteditable="true" [innerHTML]="htmlContent">
+    </div>
+  </div>
+
+
+</div>

@@ -9,16 +9,25 @@ $textarea-size-height: 620px;
 
 .textarea-size {
     width: $textarea-size-width;
-    height: $textarea-size-height;
+  height: $textarea-size-height;
 }
 
 .textarea-scroller {
-    width: $textarea-size-width;
-    height: $textarea-size-height;
-    overflow-y: uto;
-    overflow-x: hidden;
-    text-align: justify;
+  width: $textarea-size-width;
+  height: $textarea-size-height;
+  overflow-y: uto;
+  overflow-x: hidden;
+  text-align: justify;
 }
+
+.text-stats-key {
+  color: #0dcaf0;
+}
+
+.text-stats-value {
+  color: red;
+}
+
 
 pre span {
   white-space: normal;

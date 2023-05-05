@@ -10,13 +10,14 @@ import {StringRoutingModule} from './string-routing.module';
 import {StringComponent} from './component/string/string.component';
 import {TextCompareComponent} from './component/text-compare/text-compare.component';
 import {MonacoEditorModule} from "ngx-monaco-editor";
+import { TextStatisticsComponent } from './component/text-statistics/text-statistics.component';
 
 
 @NgModule({
   declarations: [
     FormatterComponent,
     EnumComponent,
-    StringComponent, TextCompareComponent,
+    StringComponent, TextCompareComponent, TextStatisticsComponent,
 
   ],
   exports: [

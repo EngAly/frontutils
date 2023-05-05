@@ -192,3 +192,8 @@ export const ENUM_DEMO_CLASS = `public static enum PaymentMethodType {
     }
 }
 `
+
+export const TEXT_STATS_DEMO = `We mostly deal with the parent-child component relations in the angular
+applications but sometimes it happens that we parent component makes some
+changes but the child component won’t notify or change values directly.
+How we can notify children or update input values directly?`
