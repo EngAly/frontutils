@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {TEXT_STATS_DEMO} from "../../../utils/mock.database";
 
 @Component({
@@ -6,29 +6,16 @@ import {TEXT_STATS_DEMO} from "../../../utils/mock.database";
   templateUrl: './text-statistics.component.html',
   styleUrls: ['./text-statistics.component.scss']
 })
-export class TextStatisticsComponent implements OnInit{
+export class TextStatisticsComponent {
 
   text = TEXT_STATS_DEMO
   htmlContent = '';
 
-  private linesCount = "Lines Count";
-  private wordsCount = "Words Count";
-  private length = "Length";
-  private charCount = "Chars Count";
-  private spacesCount = "Spaces Count";
-
   private stack1 = new Array();
   private stack2 = new Array();
 
-  ngOnInit(): void {
-    this.getStatistics();
-  }
-
-
-  public getStatistics() {
-    this.htmlContent = '';
-    let statsMap = this.populateMapWithTextStats();
-    this.populateMapToHtml(statsMap);
+  public setStatistics(text: string) {
+    this.htmlContent = text;
   }
 
   public clear() {
@@ -38,45 +25,6 @@ export class TextStatisticsComponent implements OnInit{
     this.htmlContent = '';
   }
 
-  private populateMapWithTextStats(): Map<string, number> {
-    let statsText = this.text;
-    let statsMap: Map<string, number> = new Map();
-
-    return statsMap
-      .set(this.linesCount, this.getLinesCount(statsText))
-      .set(this.wordsCount, this.getWordsCount(statsText))
-      .set(this.length, this.getTextLength(statsText))
-      .set(this.charCount, this.getTextChars(statsText))
-      .set(this.spacesCount, this.getSpacesCount(statsText))
-      ;
-  }
-
-  private populateMapToHtml(statsMap: Map<string, number>) {
-    Array.from(statsMap.keys()).forEach(key => {
-      this.htmlContent += `<h4 class="text-stats-key">${key}: <span class="text-stats-value">${statsMap.get(key)}</span></h4>`;
-    });
-  }
-
-  private getWordsCount(text: string): number {
-    return text.split(/\s+/).length;
-  }
-
-  private getTextLength(text: string): number {
-    return text.length;
-  }
-
-  private getTextChars(text: string): number {
-    return text.replace(/\s/g, "").length;
-  }
-
-  private getSpacesCount(text: string): number {
-    return this.getTextLength(text) - this.getTextChars(text);
-  }
-
-  private getLinesCount(text: string): number {
-    const lines = (text.match(/\n/g) || '').length + 1
-    return lines;
-  }
 
   public do() {
 
@@ -98,9 +46,6 @@ export class TextStatisticsComponent implements OnInit{
       }
       this.text = "";
     }
-
-    this.getStatistics();
-
   }
 
   public undo() {
@@ -112,8 +57,6 @@ export class TextStatisticsComponent implements OnInit{
       this.text = value;
       this.stack2.push(value);
     }
-
-    this.getStatistics();
   }
 
 }

@@ -11,13 +11,14 @@ import {StringComponent} from './component/string/string.component';
 import {TextCompareComponent} from './component/text-compare/text-compare.component';
 import {MonacoEditorModule} from "ngx-monaco-editor";
 import { TextStatisticsComponent } from './component/text-statistics/text-statistics.component';
+import { TextStatisticsProcessComponent } from './component/text-statistics/text-statistics-process.component';
 
 
 @NgModule({
   declarations: [
     FormatterComponent,
     EnumComponent,
-    StringComponent, TextCompareComponent, TextStatisticsComponent,
+    StringComponent, TextCompareComponent, TextStatisticsComponent, TextStatisticsProcessComponent,
 
   ],
   exports: [

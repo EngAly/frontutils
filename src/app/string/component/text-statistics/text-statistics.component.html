@@ -1,11 +1,11 @@
 <div class="row">
 
   <div class="col-5">
-    <textarea class="textarea-size p-2" (ngModelChange)="getStatistics()" [(ngModel)]="text "></textarea>
+    <textarea class="textarea-size p-2" [(ngModel)]="text"></textarea>
   </div>
 
   <div class="col-1 align-self-center">
-    <button class="btn btn-success btn-md m-1" (click)="getStatistics()">Statistics</button>
+    <button class="btn btn-success btn-md m-1" >Statistics</button>
 
     <div class="btn-group">
       <button class="btn btn-success" (click)="undo()"><<<</button>
@@ -21,5 +21,6 @@
     </div>
   </div>
 
-
 </div>
+
+<string-text-statistics-process [text]="text" (statsEmitter)="setStatistics($event)"></string-text-statistics-process>
